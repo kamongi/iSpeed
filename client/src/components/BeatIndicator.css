@@ -1,0 +1,58 @@
+.beat-indicator {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  transition: all 0.1s ease;
+}
+
+.beat-indicator.inactive {
+  opacity: 0.3;
+}
+
+.beat-pulse {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.3;
+  transition: all 0.1s ease;
+}
+
+.beat-indicator.active .beat-pulse {
+  opacity: 1;
+  transform: scale(1.2);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.beat-indicator.active {
+  border-color: var(--accent);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.beat-label {
+  position: absolute;
+  bottom: -24px;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .beat-indicator {
+    width: 60px;
+    height: 60px;
+  }
+
+  .beat-pulse {
+    width: 30px;
+    height: 30px;
+  }
+}

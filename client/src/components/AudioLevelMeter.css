@@ -1,0 +1,75 @@
+.audio-level-meter {
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.level-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.level-value {
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.level-bars {
+  display: flex;
+  gap: 3px;
+  height: 40px;
+  align-items: flex-end;
+}
+
+.bar {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  transition: background-color 0.1s ease, height 0.1s ease;
+  min-height: 4px;
+}
+
+.bar.active {
+  min-height: 100%;
+}
+
+.bar.active.green {
+  background: var(--accent);
+  box-shadow: 0 0 4px var(--accent);
+}
+
+.bar.active.yellow {
+  background: var(--warning);
+  box-shadow: 0 0 4px var(--warning);
+}
+
+.bar.active.red {
+  background: var(--error);
+  box-shadow: 0 0 4px var(--error);
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-bars {
+    height: 30px;
+  }
+}

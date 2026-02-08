@@ -1,0 +1,114 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build outputs
+dist/
+build/
+*.log
+.cache/
+
+# Vite
+.vite/
+*.local
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+.pytest_cache/
+
+# Audio test files (optional - keep fixtures in git)
+# Uncomment if test audio files are large
+# tests/fixtures/*.mp3
+# tests/fixtures/*.wav
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+server/data/*.db
+
+# Temporary files
+*.tmp
+*.temp
+.temp/
+tmp/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Raspberry Pi specific
+*.img
+*.iso
+
+# Secrets and credentials
+credentials.json
+secrets.json
+*.key
+*.pem
+*.crt
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Production
+.vercel
+.netlify
+.firebase/
+
+# Monitoring and profiling
+.clinic/
+.0x/
+.profile
+
+# Documentation build
+docs/_build/
+site/
