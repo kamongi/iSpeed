@@ -10,6 +10,8 @@ export class AudioAnalyzer {
     this.spectralFluxHistory = [];
     this.onsetTimes = [];
     this.lastOnsetTime = 0;
+    this.sensitivity = 1.0;
+    this.frequencyFocus = 'drums';
   }
 
   /**
@@ -217,6 +219,36 @@ export class AudioAnalyzer {
     this.spectralFluxHistory = [];
     this.onsetTimes = [];
     this.lastOnsetTime = 0;
+  }
+
+  /**
+   * Set sensitivity (for enhanced analyzer compatibility)
+   * @param {number} value - Sensitivity multiplier (0.5-2.0)
+   */
+  setSensitivity(value) {
+    this.sensitivity = value;
+  }
+
+  /**
+   * Set frequency focus (for enhanced analyzer compatibility)
+   * @param {string} focus - 'kick', 'drums', or 'balanced'
+   */
+  setFrequencyFocus(focus) {
+    this.frequencyFocus = focus;
+  }
+
+  /**
+   * Get analyzer statistics
+   * @returns {Object} Statistics object
+   */
+  getStats() {
+    return {
+      onsetCount: this.onsetTimes.length,
+      spectralFluxSize: this.spectralFluxHistory.length,
+      lastOnsetTime: this.lastOnsetTime,
+      sensitivity: this.sensitivity,
+      frequencyFocus: this.frequencyFocus,
+    };
   }
 }
 

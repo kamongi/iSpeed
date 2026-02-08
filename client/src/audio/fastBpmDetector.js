@@ -166,9 +166,8 @@ export class FastBPMDetector {
   runCalibration(spectrum) {
     const elapsed = Date.now() - this.startTime;
 
-    // Collect energy samples using linear-domain conversion
-    const linear = this.analyzer.toLinearWeighted(spectrum);
-    const energy = this.analyzer.calculateEnergy(linear);
+    // Collect energy samples from spectrum values
+    const energy = spectrum.reduce((sum, val) => sum + Math.abs(val), 0) / spectrum.length;
     this.calibrationSamples.push(energy);
 
     if (elapsed >= this.calibrationDuration) {
