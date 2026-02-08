@@ -34,6 +34,13 @@ jobs:
         working-directory: client
         run: npm run build
 
+      - name: Verify dist directory
+        run: |
+          echo "Checking dist directory..."
+          ls -la client/dist/
+          echo "---"
+          du -sh client/dist/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
