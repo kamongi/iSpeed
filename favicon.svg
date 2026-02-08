@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#1a1a1a"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#00ff88" stroke-width="16" opacity="0.3"/>
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#00ff88" stroke-width="12" opacity="0.5"/>
+  <circle cx="256" cy="256" r="80" fill="none" stroke="#00ff88" stroke-width="8" opacity="0.7"/>
+  <circle cx="256" cy="256" r="30" fill="#00ff88"/>
+  <text x="256" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="bold" font-size="72" fill="#ffffff">iSpeed</text>
+  <path d="M 200 180 Q 220 140 256 140 Q 292 140 312 180" fill="none" stroke="#00ff88" stroke-width="10" stroke-linecap="round"/>
+  <path d="M 180 200 Q 210 120 256 120 Q 302 120 332 200" fill="none" stroke="#00ff88" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+</svg>
