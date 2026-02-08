@@ -34,10 +34,18 @@ jobs:
         working-directory: client
         run: npm run build
 
+      - name: Create .nojekyll file
+        run: touch client/dist/.nojekyll
+
       - name: Verify dist directory
         run: |
           echo "Checking dist directory..."
           ls -la client/dist/
+          echo "---"
+          echo "Checking for 404.html:"
+          test -f client/dist/404.html && echo "✓ 404.html found" || echo "✗ 404.html missing"
+          echo "Checking for .nojekyll:"
+          test -f client/dist/.nojekyll && echo "✓ .nojekyll found" || echo "✗ .nojekyll missing"
           echo "---"
           du -sh client/dist/
 
